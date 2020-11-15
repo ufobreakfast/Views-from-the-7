@@ -1,0 +1,419 @@
+:root {
+    --container-bg-color: #333;
+    --left-bg-color: rgba(223, 39, 39, 0.7);
+    --left-button-hover-color: rgba(161, 11, 11, 0.3);
+    --right-bg-color: rgba(43, 43, 43, 0.8);
+    --right-button-hover-color: rgba(92, 92, 92, 0.3);
+    --hover-width: 75%;
+    --other-width: 25%;
+    --speed: 1000ms;
+  }
+  
+  html, body {
+    padding:0;
+    margin:0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; 
+    font-family: 'Architects Daughter', cursive;
+    background: #EB5757;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #000000, #EB5757);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #000000, #EB5757); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  }
+
+  .been{
+
+color: black;
+position: static;
+
+
+  }
+
+  .btn.btn-white {
+    padding-top: 20%;
+    display: block;
+position: absolute;
+background-color: white;
+
+  }
+  
+  h1 {
+    font-family: 'Architects Daughter', cursive;
+    font-size: 4rem;
+    color: #fff;
+    position: relative;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
+
+  .mind {
+    /* font-size: 4rem; */
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-family: 'Architects Daughter', cursive;
+  }
+  
+  .button2 {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 40%;
+    height: 2.5rem;
+    padding-top: 0.3rem;
+    width: 15rem;
+    text-align: center;
+    color: #fff; 
+     border: #fff solid 0.1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    transform: translateX(-50%);
+    font-family: 'Architects Daughter', cursive;
+  }
+  
+  .split.left .button2:hover {
+    background-color: var(--left-button-hover-color);
+    border-color: var(--left-button-hover-color);
+  }
+  
+  .split.right .button2:hover {
+    background-color: var(--right-button-hover-color);
+    border-color: var(--right-button-hover-color);
+  }
+  
+  .container2 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: var(--container-bg-color);
+    
+  }
+  
+  .split {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .split.left {
+    left:0;
+    background: url("https://images.unsplash.com/photo-1545324875-f4b91d62947c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1150&q=60") center center no-repeat;
+    background-size: cover;
+  }
+  
+  .split.left:before {
+    position:absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: var(--left-bg-color);
+  }
+  
+  .split.right {
+    right:0;
+    background: url("viewfrom7logo.jpeg") center center no-repeat;
+    background-size: cover;
+  }
+  
+  .split.right:before {
+    position:absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: var(--right-bg-color);
+  }
+  
+  .split.left, .split.right, .split.right:before, .split.left:before {
+    transition: var(--speed) all ease-in-out;
+  }
+  
+  .hover-left .left {
+    width: var(--hover-width);
+  }
+  
+  .hover-left .right {
+    width: var(--other-width);
+  }
+  
+  .hover-left .right:before {
+    z-index: 2;
+  }
+  
+  
+  .hover-right .right {
+    width: var(--hover-width);
+  }
+  
+  .hover-right .left {
+    width: var(--other-width);
+  }
+  
+  .hover-right .left:before {
+    z-index: 2;
+  }
+  
+  @media(max-width: 800px) {
+    h1 {
+      font-size: 2rem;
+      font-family: 'Architects Daughter', cursive;
+    }
+  
+    .button2 {
+      width: 12rem;
+    }
+  }
+  
+  @media(max-height: 700px) {
+    .button2 {
+      top: 70%;
+    }
+  }
+
+   /*  footer  */
+ body {
+  font-family: 'Architects Daughter', cursive;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #eee;
+}
+
+.header {
+  height: 100vh;
+  background-image: 
+  linear-gradient(to right bottom, 
+   rgba(15, 17, 17, 0.8),
+   rgba(255, 0, 0, 0.8)),
+   url("https://images.unsplash.com/photo-1549861833-c5932fd19229?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1191&q=80");
+background-size: cover;
+  background-position: top;
+  position: relative;
+  font-family: 'Architects Daughter', cursive;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+
+.brand-box {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.brand { font-size: 20px; }
+
+.text-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: 'Architects Daughter', cursive;
+}
+
+.heading-primary {
+  color: white;
+  text-transform: uppercase;
+  font-family: 'Architects Daughter', cursive;
+  backface-visibility: hidden;
+  margin-bottom: 30px;
+}
+
+.heading-primary-main {
+  display: block;
+  font-size: 26px;
+  font-weight: 400;
+  letter-spacing: 5px;
+  font-family: 'Architects Daughter', cursive;
+}
+
+.heading-primary-sub {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 7.4px;
+  font-family: 'Architects Daughter', cursive;
+}
+
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all .2s;
+  position: relative;
+  font-family: 'Architects Daughter', cursive;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+  background-color: white;
+  color: #777;
+font-size: 14px;
+}
+ /* footer end */
+
+ /* custom scroll bar  */
+* {
+	margin: 0;
+	padding: 0;
+
+  }
+  
+  section {
+	padding: 6px;
+	background: black;
+  }
+  
+  section h2 {
+	font-size: 2.5em;
+  color: #fff;
+  font-family: 'Architects Daughter', cursive;
+  }
+  
+  section p {
+	font-size: 1.2em;
+  color: #fff;
+  font-family: 'Architects Daughter', cursive;
+  }
+  
+  ::-webkit-scrollbar {
+	width: 0;
+  }
+  
+  #scrollPath {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 10px;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.05);
+  }
+  
+  #progressBar {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 10px;
+	background: linear-gradient(to top, #008aff, #00ffe7);
+	animation: animate 5s linear infinite;
+  }
+  
+  @keyframes animate {
+	0%, 100% {
+	  filter: hue-rotate(0);
+	}
+	50% {
+	  filter: hue-rotate(360deg);
+	}
+  }
+  
+  #progressBar::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to top, #008aff, #00ffe7);
+	filter: blur(10px);
+  }
+  
+  #progressBar::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to top, #008aff, #00ffe7);
+	filter: blur(30px);
+  }
+  /* scroll end  */
+
+   /* amate text  */
+.link {
+  outline: none;
+  text-decoration: none;
+  position: relative;
+  font-size: 2em;
+  line-height: 1;
+  color: red;
+  display: inline-block;
+  padding-left: 42%;
+  padding-bottom: 2%;
+  font-family: 'Architects Daughter', cursive;
+  }
+     
+ .link--change {
+  text-transform: uppercase;
+  font-weight: 650;
+  overflow: hidden;
+  line-height: 0.75;
+  color: black;
+  font-family: 'Architects Daughter', cursive;
+  }
+     
+ .link--change:hover {
+  color: transparent;
+  font-family: 'Architects Daughter', cursive;
+  }
+     
+ .link--change::after {
+  content: '';
+  position: absolute;
+  height: 8px;
+  width: 100%;
+  top: 50%;
+  margin-top: -4px;
+  right: 0;
+  background: black;
+  transform: translate3d(-50%,0,0);
+  transition: transform .3s;
+  transition-timing-function: cubic-bezier (0.7,0,0.3,1);
+  }
+     
+ .link--change:hover::after {
+  transform: translate3d(100%,0,0);
+  }
+     
+ .link--change::before {
+  content: attr(data-letters);
+  position: absolute;
+  z-index: 2;
+  overflow: hidden;
+  color: white;
+  white-space: nowrap;
+  width: 0%;
+  transition: width 0.6s 0.5s;
+  }
+     
+ .link--change:hover::before {
+  width: 100%;
+  }
+/* end  */
+
+ .nerd {
+
+  font-family: 'Architects Daughter', cursive;
+
+} 
